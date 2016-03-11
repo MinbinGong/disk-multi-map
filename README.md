@@ -1,6 +1,6 @@
 # Disk Multi Map
 
-An elegant C++ implementation of a disk-based multi-map hash table, written as a part of an Intro to Computer Science class project. It makes efficient use of space by remembering the locations of deleted entries (also using no additional space). Due to the project requirement, each key, value, or context can be a maximum of 120 characters. The data is stored in a binary file and the iterator supports caching.
+An elegant C++ implementation of a disk-based multi-map hash table, written as a part of an Intro to Computer Science class project. It makes efficient use of space by remembering the locations of deleted entries (also using no additional space). Due to the project requirements, each key, value, or context can be a maximum of 120 characters. The data is stored in a binary file and the iterator supports caching.
 
 The map supports multiple items with the same key, value, and context (hence a multimap). The items are stored in no particular order. Insertion is constant time. Erasure is O(K) where K is the number of nodes matching the key, value, and context. Search is O(K) where K is the number of nodes matching the key, value, and context.
 
@@ -49,8 +49,8 @@ void print_all(const std::string& key, DiskMultiMap& map) {
 	if (!it.isValid())
 		printf("There were no associations matching %s\n", key);
     
-	while (it.isValid()) {          // while there are still matches
-		MultiMapTuple tuple = *it;  // get the next association
+	while (it.isValid()) {  // while there are still matches
+		DiskMultiMap::MultiMapTuple tuple = *it;  // get the next association
 		printf("On %s, %s was %s\n", tuple.context, tuple.key, tuple.value);
 		++it;
 	}
