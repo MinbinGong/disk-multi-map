@@ -1,5 +1,5 @@
-#ifndef BINARYFILE_H_
-#define BINARYFILE_H_
+#ifndef __HEADER_BINARYFILE
+#define __HEADER_BINARYFILE
 
 #include <iostream>
 #include <fstream>
@@ -109,4 +109,4 @@ private:
 	fstream m_stream; // fstreams are not copyable, so BinaryFiles won't be copyable.
 };
 
-#endif // BINARYFILE_H_
+#endif // __HEADER_BINARYFILE
